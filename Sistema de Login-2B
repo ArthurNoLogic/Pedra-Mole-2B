@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Login</title>
+
+    <style>
+        /* Estilo geral da página */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef2f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Caixa de login */
+        .login {
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            width: 300px;
+            box-shadow: 0 4px 15px #00000020;
+        }
+
+        h2 {
+            text-align: center;
+            color: #2563eb;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px 0;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-indent: 10px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1d4ed8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login">
+        <h2>Bem-vindo!</h2>
+
+        <form id="formLogin">
+            <label for="usuario">Usuário:</label>
+            <input
+                type="text"
+                id="usuario"
+                placeholder="Digite seu usuário"
+                required
+            >
+
+            <label for="senha">Senha:</label>
+            <input
+                type="password"
+                id="senha"
+                placeholder="Digite sua senha"
+                required
+            >
+
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+
+    <script>
+        // Captura o formulário
+        document.getElementById("formLogin")
+            .addEventListener("submit", function(event) {
+
+                event.preventDefault();
+
+                const usuario =
+                    document.getElementById("usuario").value;
+
+                alert("Olá, " + usuario +
+                      "! Exemplo de login executado.");
+            });
+    </script>
+
+</body>
+</html>
