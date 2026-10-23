@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MeuSite - Página Inicial</title>
+
+    <style>
+        /* Configuração geral */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f1f5f9;
+            color: #333;
+        }
+
+        /* Menu superior */
+        header {
+            background-color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h2 {
+            color: #2563eb;
+            margin: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin-left: 15px;
+        }
+
+        nav a:hover {
+            color: #2563eb;
+        }
+
+        /* Apresentação principal */
+        .banner {
+            background-color: #dbeafe;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .banner h1 {
+            color: #1e3a8a;
+        }
+
+        .banner button {
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Seção de conteúdos */
+        .conteudo {
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: white;
+            padding: 25px;
+            width: 200px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px #00000010;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #1e293b;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        /* Adaptação para celulares */
+        @media (max-width: 500px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h2>MeuSite</h2>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <section class="banner" id="inicio">
+        <h1>Bem-vindo ao MeuSite!</h1>
+
+        <p>Aprenda, explore e descubra coisas novas.</p>
+
+        <button onclick="saudacao()">Saiba mais</button>
+    </section>
+
+    <section class="conteudo" id="sobre">
+        <h2>O que você encontra aqui?</h2>
+
+        <div class="cards">
+            <div class="card">
+                <h3>📚 Aprender</h3>
+                <p>Descubra novos conhecimentos.</p>
+            </div>
+
+            <div class="card">
+                <h3>💡 Explorar</h3>
+                <p>Conheça novas ideias.</p>
+            </div>
+
+            <div class="card">
+                <h3>👥 Conectar</h3>
+                <p>Compartilhe experiências.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contato">
+        <p>© 2026 MeuSite - Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function saudacao() {
+            alert("Obrigado por visitar o MeuSite!");
+        }
+    </script>
+
+</body>
+</html>
